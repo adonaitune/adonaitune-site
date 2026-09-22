@@ -1,0 +1,102 @@
+# Painel do site Adonai Shalom / AdonaiTune.
+# backend git-gateway: as alterações feitas aqui são gravadas direto no site,
+# através da conta do GitHub que você conectar ao Netlify.
+backend:
+  name: git-gateway
+  branch: main
+
+# Onde as fotos e vídeos enviados pelo painel são guardados.
+media_folder: "assets/uploads"
+public_folder: "assets/uploads"
+
+# Nomes em português, como aparecem no menu do painel.
+locale: "pt"
+
+collections:
+  - name: "geral"
+    label: "Site (textos e listas)"
+    files:
+      - file: "data/site.json"
+        label: "Conteúdo do site"
+        name: "site"
+        fields:
+          - label: "Link da rádio (transmissão ao vivo)"
+            name: "stream"
+            widget: "list"
+            summary: "{{fields.url}}"
+            field: { label: "Link", name: "url", widget: "string" }
+
+          - label: "Publicações — Adonai Shalom"
+            name: "posts"
+            widget: "list"
+            summary: "{{fields.cat}} — {{fields.title}}"
+            fields:
+              - { label: "Categoria", name: "cat", widget: "select", options: ["Projetos","Evangelismo","Pregações","Mensagens"] }
+              - { label: "Data (texto livre, ex: 12 de março)", name: "date", widget: "string", required: false }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Texto", name: "text", widget: "text" }
+              - { label: "Foto de capa", name: "img", widget: "image", required: false }
+              - { label: "Link do vídeo ou da postagem", name: "url", widget: "string", required: false }
+              - { label: "Marcar como exemplo", name: "exemplo", widget: "boolean", default: false }
+
+          - label: "Notícias — AdonaiTune"
+            name: "news"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Data (texto livre)", name: "date", widget: "string", required: false }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Texto", name: "text", widget: "text" }
+              - { label: "Marcar como exemplo", name: "exemplo", widget: "boolean", default: false }
+
+          - label: "Stories 9:16 — Adonai Shalom"
+            name: "stories_shalom"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Tipo", name: "type", widget: "select", options: ["image","video"] }
+              - { label: "Foto ou vídeo (formato vertical 9:16)", name: "src", widget: "file", required: false }
+              - { label: "Foto pequena da bolinha (opcional)", name: "poster", widget: "image", required: false }
+              - { label: "Texto embaixo da bolinha", name: "label", widget: "string", required: false }
+              - { label: "Legenda ao abrir", name: "caption", widget: "string", required: false }
+              - { label: "Marcar como exemplo", name: "exemplo", widget: "boolean", default: false }
+
+          - label: "Stories 9:16 — AdonaiTune"
+            name: "stories_tune"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Tipo", name: "type", widget: "select", options: ["image","video"] }
+              - { label: "Foto ou vídeo (formato vertical 9:16)", name: "src", widget: "file", required: false }
+              - { label: "Foto pequena da bolinha (opcional)", name: "poster", widget: "image", required: false }
+              - { label: "Texto embaixo da bolinha", name: "label", widget: "string", required: false }
+              - { label: "Legenda ao abrir", name: "caption", widget: "string", required: false }
+              - { label: "Marcar como exemplo", name: "exemplo", widget: "boolean", default: false }
+
+          - label: "Playlist — AdonaiTune"
+            name: "playlist"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Título da música", name: "title", widget: "string" }
+              - { label: "Artista", name: "artist", widget: "string", default: "AdonaiTune" }
+              - { label: "Arquivo de áudio (mp3)", name: "src", widget: "file", required: false }
+              - { label: "Marcar como exemplo", name: "exemplo", widget: "boolean", default: false }
+
+          - label: "Redes sociais — Adonai Shalom"
+            name: "social_shalom"
+            widget: "list"
+            summary: "{{fields.nome}}"
+            fields:
+              - { label: "Rede", name: "rede", widget: "select", options: ["instagram","facebook","youtube","whatsapp","tiktok"] }
+              - { label: "Nome exibido", name: "nome", widget: "string" }
+              - { label: "Endereço (link)", name: "url", widget: "string", required: false }
+
+          - label: "Redes sociais — AdonaiTune"
+            name: "social_tune"
+            widget: "list"
+            summary: "{{fields.nome}}"
+            fields:
+              - { label: "Rede", name: "rede", widget: "select", options: ["instagram","facebook","youtube","whatsapp","tiktok"] }
+              - { label: "Nome exibido", name: "nome", widget: "string" }
+              - { label: "Endereço (link)", name: "url", widget: "string", required: false }

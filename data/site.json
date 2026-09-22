@@ -1,0 +1,48 @@
+{
+  "stream": [
+    "https://sapircast.caster.fm:11225/Mw3Cv",
+    "https://sapircast.caster.fm:11225/Mw3Cv?token=74381f154315899824c6949d5aa09a05"
+  ],
+  "posts": [
+    { "cat": "Pregações",   "date": "", "title": "Sua próxima pregação aparece aqui", "text": "Escreva um resumo curto da mensagem e coloque o link do vídeo, se tiver.", "url": "", "img": "", "exemplo": true },
+    { "cat": "Evangelismo", "date": "", "title": "Relato de evangelismo",             "text": "Conte onde foi, quem participou e o que Deus fez.", "url": "", "img": "", "exemplo": true },
+    { "cat": "Projetos",    "date": "", "title": "Um projeto do Adonai Shalom",       "text": "Explique o objetivo do projeto e como as pessoas podem participar.", "url": "", "img": "", "exemplo": true },
+    { "cat": "Mensagens",   "date": "", "title": "Mensagem da semana",                "text": "Uma palavra curta para edificar quem visita o site.", "url": "", "img": "", "exemplo": true },
+    { "cat": "Pregações",   "date": "", "title": "Outra pregação",                    "text": "Cada publicação nova entra no topo da lista.", "url": "", "img": "", "exemplo": true }
+  ],
+  "news": [
+    { "date": "", "title": "Novidade da rádio",     "text": "Avisos, programação especial e novas músicas entram aqui.", "exemplo": true },
+    { "date": "", "title": "Divulgue a AdonaiTune", "text": "Compartilhe o link da rádio com quem precisa de uma palavra hoje.", "exemplo": true },
+    { "date": "", "title": "Peça sua oração",       "text": "Explique aqui como o ouvinte pode enviar um pedido de oração.", "exemplo": true }
+  ],
+  "stories_shalom": [
+    { "type": "video", "src": "", "poster": "", "label": "Prévia", "caption": "", "exemplo": true },
+    { "type": "image", "src": "", "poster": "", "label": "Evento", "caption": "", "exemplo": true }
+  ],
+  "stories_tune": [
+    { "type": "video", "src": "", "poster": "", "label": "Ao vivo", "caption": "", "exemplo": true }
+  ],
+  "playlist": [
+    { "title": "Música 1", "artist": "AdonaiTune", "src": "", "exemplo": true },
+    { "title": "Música 2", "artist": "AdonaiTune", "src": "", "exemplo": true },
+    { "title": "Música 3", "artist": "AdonaiTune", "src": "", "exemplo": true },
+    { "title": "Música 4", "artist": "AdonaiTune", "src": "", "exemplo": true },
+    { "title": "Música 5", "artist": "AdonaiTune", "src": "", "exemplo": true },
+    { "title": "Música 6", "artist": "AdonaiTune", "src": "", "exemplo": true },
+    { "title": "Música 7", "artist": "AdonaiTune", "src": "", "exemplo": true }
+  ],
+  "social_shalom": [
+    { "rede": "instagram", "nome": "Instagram", "url": "" },
+    { "rede": "facebook",  "nome": "Facebook",  "url": "" },
+    { "rede": "youtube",   "nome": "YouTube",   "url": "" },
+    { "rede": "whatsapp",  "nome": "WhatsApp",  "url": "" },
+    { "rede": "tiktok",    "nome": "TikTok",    "url": "" }
+  ],
+  "social_tune": [
+    { "rede": "instagram", "nome": "Instagram", "url": "" },
+    { "rede": "facebook",  "nome": "Facebook",  "url": "" },
+    { "rede": "youtube",   "nome": "YouTube",   "url": "" },
+    { "rede": "whatsapp",  "nome": "WhatsApp",  "url": "" },
+    { "rede": "tiktok",    "nome": "TikTok",    "url": "" }
+  ]
+}
