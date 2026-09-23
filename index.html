@@ -804,6 +804,63 @@ footer{padding:56px 0 130px;color:var(--muted);font-size:.95rem}
   function setMin(m){root.classList.toggle('min',m);store('min',m?'1':'0');if(!m)applyScale()}
   $('adtMin').addEventListener('click',function(){setMin(true)});
   $('adtBubble').addEventListener('click',function(){setMin(false)});
+  (function(){
+  var el = $('adt');
+  var dragging = false, moved = false, startX, startY, origLeft, origBottom;
+  function getPos(){
+    var r = el.getBoundingClientRect();
+    return {left:r.left, bottom: window.innerHeight - r.bottom};
+  }
+  function onDown(e){
+    var p = e.touches ? e.touches[0] : e;
+    dragging = true; moved = false;
+    var pos = getPos();
+    origLeft = pos.left; origBottom = pos.bottom;
+    startX = p.clientX; startY = p.clientY;
+  }
+  function onMove(e){
+    if(!dragging) return;
+    var p = e.touches ? e.touches[0] : e;
+    var dx = p.clientX - startX, dy = p.clientY - startY;
+    if(Math.abs(dx) > 6 || Math.abs(dy) > 6) moved = true;
+    if(moved){
+      if(e.cancelable) e.preventDefault();
+      var newLeft = origLeft + dx;
+      var newBottom = origBottom - dy;
+      var maxLeft = window.innerWidth - el.offsetWidth - 8;
+      var maxBottom = window.innerHeight - el.offsetHeight - 8;
+      newLeft = Math.max(8, Math.min(maxLeft, newLeft));
+      newBottom = Math.max(8, Math.min(maxBottom, newBottom));
+      el.style.left = newLeft + 'px';
+      el.style.right = 'auto';
+      el.style.bottom = newBottom + 'px';
+    }
+  }
+  function onUp(){
+    if(!dragging) return;
+    dragging = false;
+    if(moved){
+      store('posLeft', el.style.left);
+      store('posBottom', el.style.bottom);
+    }
+  }
+  var savedLeft = load('posLeft', null);
+  var savedBottom = load('posBottom', null);
+  if(savedLeft && savedBottom){
+    el.style.left = savedLeft;
+    el.style.bottom = savedBottom;
+    el.style.right = 'auto';
+  }
+  el.addEventListener('mousedown', onDown);
+  window.addEventListener('mousemove', onMove);
+  window.addEventListener('mouseup', onUp);
+  el.addEventListener('touchstart', onDown, {passive:true});
+  window.addEventListener('touchmove', onMove, {passive:false});
+  window.addEventListener('touchend', onUp);
+  el.addEventListener('click', function(e){
+    if(moved){ e.stopPropagation(); e.preventDefault(); moved = false; }
+  }, true);
+})();
 
   if('mediaSession' in navigator){
     try{
