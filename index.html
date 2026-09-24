@@ -2,6 +2,9 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=4ad95471-1f5a-4a5c-b95c-181754350ed8
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Adonai Shalom</title>
 <meta name="description" content="Adonai Shalom: evangelismo, pregações, mensagens e projetos. AdonaiTune: rádio gospel 24 horas.">
@@ -445,31 +448,63 @@ footer{padding:56px 0 130px;color:var(--muted);font-size:.95rem}
 
 <!-- ================= DISPLAY FLUTUANTE (fica em todas as abas) ================= -->
 <div id="adt" aria-label="Rádio AdonaiTune">
-  <button id="adtBubble" type="button" aria-label="Abrir o player da AdonaiTune"><img src="assets/logo-tune.png" alt=""></button>
+  <button id="adtBubble" type="button" aria-label="Abrir o player da AdonaiTune">
+    <img src="assets/logo-tune.png" alt="">
+  </button>
+
   <div id="adtPanel">
     <div class="a-tools">
       <button class="a-tool" id="adtSmaller" type="button" aria-label="Diminuir o player">A−</button>
       <button class="a-tool" id="adtBigger" type="button" aria-label="Aumentar o player">A+</button>
       <button class="a-tool" id="adtMin" type="button" aria-label="Minimizar para a logo">—</button>
     </div>
+
     <div class="a-hero">
       <img src="assets/logo-tune.png" alt="AdonaiTune">
       <b>ADONAITUNE</b>
       <span>RÁDIO GOSPEL 24 HORAS</span>
     </div>
+
     <div class="a-info">
-      <div class="a-pill"><span class="a-dot"></span><span id="adtState">PARADO</span></div>
-      <div class="a-sig"><span id="adtSigText">Sinal</span><div class="a-bars" id="adtSig"><i></i><i></i><i></i><i></i></div></div>
+      <div class="a-pill">
+        <span class="a-dot"></span>
+        <span id="adtState">PARADO</span>
+      </div>
+      <div class="a-sig">
+        <span id="adtSigText">Sinal</span>
+        <div class="a-bars" id="adtSig"><i></i><i></i><i></i><i></i></div>
+      </div>
     </div>
-    <button class="a-play" id="adtPlay" type="button"><span id="adtIc">▶</span>&nbsp; <span id="adtTxt">OUVIR AO VIVO</span></button>
+
+    <button class="a-play" id="adtPlay" type="button">
+      <span id="adtIc">▶</span>&nbsp; <span id="adtTxt">OUVIR AO VIVO</span>
+    </button>
+
+    <!-- Player oficial do Caster.fm (aparece quando clicar) -->
+    <div id="adtCasterWrap" style="display:none; margin-top:12px; border-radius:12px; overflow:hidden;">
+      <div id="adtCasterPlayer"></div>
+      <button id="adtStop" type="button" style="
+        width:100%;
+        margin-top:8px;
+        padding:11px;
+        border:none;
+        border-radius:8px;
+        background:#e81e4d;
+        color:#fff;
+        font-weight:700;
+        font-size:14px;
+        cursor:pointer;
+      ">■ PARAR RÁDIO</button>
+    </div>
+
     <div class="a-vol">
       <button id="adtMute" type="button" aria-label="Silenciar">VOL</button>
       <input id="adtVol" type="range" min="0" max="100" value="80" aria-label="Volume">
     </div>
+
     <div class="a-msg" id="adtMsg" aria-live="polite">Toque em ouvir ao vivo para começar.</div>
   </div>
 </div>
-
 <script src="conteudo.js"></script>
 <script>
 (function(){
@@ -903,5 +938,54 @@ footer{padding:56px 0 130px;color:var(--muted);font-size:.95rem}
   }).catch(function(){ /* segue com o conteúdo de exemplo, sem erro visível para o visitante */ });
 })();
 </script>
-</body>
+<script>
+(function(){
+  var playBtn = document.getElementById('adtPlay');
+  var stopBtn = document.getElementById('adtStop');
+  var wrap = document.getElementById('adtCasterWrap');
+  var container = document.getElementById('adtCasterPlayer');
+  var state = document.getElementById('adtState');
+  var msg = document.getElementById('adtMsg');
+  var ic = document.getElementById('adtIc');
+  var txt = document.getElementById('adtTxt');
+  var loaded = false;
+
+  function start(){
+    if(loaded){
+      wrap.style.display = 'block';
+      state.textContent = '● AO VIVO';
+      msg.textContent = 'Clique em PLAY no player abaixo.';
+      ic.textContent = '❚❚';
+      txt.textContent = 'TOCANDO';
+      return;
+    }
+    container.innerHTML = '<div data-type="newStreamPlayer" data-publicToken="d3e91477-f420-417c-b7ba-dda65cd4d8cd" data-theme="dark" data-color="e81e4d" data-channelId="" data-rendered="false" class="cstrEmbed"><a href="https://www.caster.fm">Shoutcast Hosting</a> <a href="https://www.caster.fm">Stream Hosting</a> <a href="https://www.caster.fm">Radio Server Hosting</a></div>';
+    var s = document.createElement('script');
+    s.src = 'https://cdn.cloud.caster.fm/widgets/embed.js';
+    s.onload = function(){
+      loaded = true;
+      wrap.style.display = 'block';
+      state.textContent = '● AO VIVO';
+      msg.textContent = 'Clique em PLAY no player abaixo.';
+      ic.textContent = '❚❚';
+      txt.textContent = 'TOCANDO';
+    };
+    document.body.appendChild(s);
+  }
+
+  function stop(){
+    wrap.style.display = 'none';
+    container.innerHTML = '';
+    loaded = false;
+    state.textContent = 'PARADO';
+    msg.textContent = 'Rádio pausada.';
+    ic.textContent = '▶';
+    txt.textContent = 'OUVIR AO VIVO';
+  }
+
+  if(playBtn) playBtn.addEventListener('click', function(e){ e.preventDefault(); e.stopImmediatePropagation(); start(); }, true);
+  if(stopBtn) stopBtn.addEventListener('click', function(e){ e.preventDefault(); stop(); }, true);
+})();
+</script></body>
 </html>
+<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="4ad95471-1f5a-4a5c-b95c-181754350ed8" data-app-host="app.netlify.com"></script>
