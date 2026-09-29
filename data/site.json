@@ -1,7 +1,6 @@
 {
   "stream": [
-    "https://sapircast.caster.fm:11225/Mw3Cv?token=0c1581659ddfa16ad92831b46ac36d2a",
-    "https://adonaitune.ismyradio.com/"
+    "https://adonaitune.ismyradio.com"
   ],
   "youtube": {
     "apiKey": "",
