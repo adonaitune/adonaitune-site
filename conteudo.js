@@ -7,7 +7,6 @@ window.SITE = {
 
   /* Link da transmissão da rádio. O primeiro é tentado antes; se falhar, usa o segundo. */
   stream: [
-    "https://sapircast.caster.fm:11225/Mw3Cv",
     "https://sapircast.caster.fm:11225/Mw3Cv?token=0c1581659ddfa16ad92831b46ac36d2a"
   ],
 
