@@ -1,6 +1,7 @@
 {
   "stream": [
-    "https://sapircast.caster.fm:11225/Mw3Cv?token=4da996087013cd0f9adc34f7aa4b6a9a"
+    "https://sapircast.caster.fm:11225/Mw3Cv",
+    "https://sapircast.caster.fm:11225/Mw3Cv?token=0c1581659ddfa16ad92831b46ac36d2a"
   ],
   "posts": [
     {
@@ -194,5 +195,89 @@
       "nome": "TikTok",
       "url": ""
     }
-  ]
+  ],
+  "posts_kids": [
+    {
+      "cat": "Músicas",
+      "date": "",
+      "title": "Louvor da semana",
+      "text": "Uma música animada para cantar junto com a criançada.",
+      "url": "",
+      "img": "",
+      "exemplo": true
+    },
+    {
+      "cat": "Mensagens",
+      "date": "",
+      "title": "Mensagem para os pequenos",
+      "text": "Uma palavra curtinha, no jeito das crianças.",
+      "url": "",
+      "img": "",
+      "exemplo": true
+    },
+    {
+      "cat": "Atividades",
+      "date": "",
+      "title": "Atividade da semana",
+      "text": "Uma brincadeira ou desafio com propósito.",
+      "url": "",
+      "img": "",
+      "exemplo": true
+    },
+    {
+      "cat": "Eventos",
+      "date": "",
+      "title": "Próximo encontro Kids",
+      "text": "Data, local e horário do próximo evento para a criançada.",
+      "url": "",
+      "img": "",
+      "exemplo": true
+    }
+  ],
+  "stories_kids": [
+    {
+      "type": "video",
+      "src": "",
+      "poster": "",
+      "label": "Kids",
+      "caption": "",
+      "exemplo": true
+    }
+  ],
+  "social_kids": [
+    {
+      "rede": "instagram",
+      "nome": "Instagram",
+      "url": ""
+    },
+    {
+      "rede": "facebook",
+      "nome": "Facebook",
+      "url": ""
+    },
+    {
+      "rede": "youtube",
+      "nome": "YouTube",
+      "url": ""
+    },
+    {
+      "rede": "whatsapp",
+      "nome": "WhatsApp",
+      "url": ""
+    },
+    {
+      "rede": "tiktok",
+      "nome": "TikTok",
+      "url": ""
+    }
+  ],
+  "youtube": {
+    "apiKey": "",
+    "channelHandle": "adonaitune",
+    "channelHandleKids": "",
+    "channelHandleShalom": ""
+  },
+  "videos_shalom": [],
+  "videos_tune": [],
+  "videos_kids": []
 }

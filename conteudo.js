@@ -8,7 +8,7 @@ window.SITE = {
   /* Link da transmissão da rádio. O primeiro é tentado antes; se falhar, usa o segundo. */
   stream: [
     "https://sapircast.caster.fm:11225/Mw3Cv",
-    "https://sapircast.caster.fm:11225/Mw3Cv?token=74381f154315899824c6949d5aa09a05"
+    "https://sapircast.caster.fm:11225/Mw3Cv?token=0c1581659ddfa16ad92831b46ac36d2a"
   ],
 
   /* Publicações da aba ADONAI SHALOM.
@@ -38,6 +38,15 @@ window.SITE = {
      label: o texto curto embaixo da bolinha.
      caption: o texto que aparece na base do story, ao abrir (opcional).
      Envie os vídeos e fotos para o Claude no chat que ele coloca aqui, ou cole o link do arquivo já publicado. */
+
+  /* ===== AdonaiTune Kids ===== */
+  posts_kids: [{"cat": "Músicas", "date": "", "title": "Louvor da semana", "text": "Uma música animada para cantar junto com a criançada.", "url": "", "img": "", "exemplo": true}, {"cat": "Mensagens", "date": "", "title": "Mensagem para os pequenos", "text": "Uma palavra curtinha, no jeito das crianças.", "url": "", "img": "", "exemplo": true}, {"cat": "Atividades", "date": "", "title": "Atividade da semana", "text": "Uma brincadeira ou desafio com propósito.", "url": "", "img": "", "exemplo": true}, {"cat": "Eventos", "date": "", "title": "Próximo encontro Kids", "text": "Data, local e horário do próximo evento para a criançada.", "url": "", "img": "", "exemplo": true}],
+  /* Vídeos do YouTube: a chave (apiKey) é gratuita, criada no Google Cloud.
+     channelHandle = o @ do canal, sem o @ (ex.: adonaitune).
+     channelHandleKids = opcional, se o canal Kids for outro. */
+  youtube: { apiKey: "", channelHandle: "adonaitune", channelHandleShalom: "", channelHandleKids: "" },
+  /* Vídeos escolhidos à mão (opcional): cole o link do YouTube em url. Aparecem antes dos automáticos. */
+  videos_shalom: [], videos_tune: [], videos_kids: [],
   stories: {
     shalom: [
       { type: "video", src: "", poster: "", label: "Prévia",  caption: "", exemplo: true },
@@ -45,6 +54,9 @@ window.SITE = {
     ],
     tune: [
       { type: "video", src: "", poster: "", label: "Ao vivo", caption: "", exemplo: true }
+    ],
+    kids: [
+      { type: "video", src: "", poster: "", label: "Kids", caption: "", exemplo: true }
     ]
   },
 
@@ -71,6 +83,7 @@ window.SITE = {
       { rede: "whatsapp",  nome: "WhatsApp",  url: "" },
       { rede: "tiktok",    nome: "TikTok",    url: "" }
     ],
+    kids: [{"rede": "instagram", "nome": "Instagram", "url": ""}, {"rede": "facebook", "nome": "Facebook", "url": ""}, {"rede": "youtube", "nome": "YouTube", "url": ""}, {"rede": "whatsapp", "nome": "WhatsApp", "url": ""}, {"rede": "tiktok", "nome": "TikTok", "url": ""}],
     tune: [
       { rede: "instagram", nome: "Instagram", url: "" },
       { rede: "facebook",  nome: "Facebook",  url: "" },

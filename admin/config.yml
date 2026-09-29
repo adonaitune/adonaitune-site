@@ -100,3 +100,70 @@ collections:
               - { label: "Rede", name: "rede", widget: "select", options: ["instagram","facebook","youtube","whatsapp","tiktok"] }
               - { label: "Nome exibido", name: "nome", widget: "string" }
               - { label: "Endereço (link)", name: "url", widget: "string", required: false }
+
+          - label: "Publicações — AdonaiTune Kids"
+            name: "posts_kids"
+            widget: "list"
+            summary: "{{fields.cat}} — {{fields.title}}"
+            fields:
+              - { label: "Categoria", name: "cat", widget: "select", options: ["Músicas","Mensagens","Atividades","Eventos"] }
+              - { label: "Data (texto livre)", name: "date", widget: "string", required: false }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Texto", name: "text", widget: "text" }
+              - { label: "Foto de capa", name: "img", widget: "image", required: false }
+              - { label: "Link (opcional)", name: "url", widget: "string", required: false }
+              - { label: "Marcar como exemplo", name: "exemplo", widget: "boolean", default: false }
+
+          - label: "Stories 9:16 — AdonaiTune Kids"
+            name: "stories_kids"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Tipo", name: "type", widget: "select", options: ["image","video"] }
+              - { label: "Foto ou vídeo (formato vertical 9:16)", name: "src", widget: "file", required: false }
+              - { label: "Foto pequena da bolinha (opcional)", name: "poster", widget: "image", required: false }
+              - { label: "Texto embaixo da bolinha", name: "label", widget: "string", required: false }
+              - { label: "Legenda ao abrir", name: "caption", widget: "string", required: false }
+              - { label: "Marcar como exemplo", name: "exemplo", widget: "boolean", default: false }
+
+          - label: "Redes sociais — AdonaiTune Kids"
+            name: "social_kids"
+            widget: "list"
+            summary: "{{fields.nome}}"
+            fields:
+              - { label: "Rede", name: "rede", widget: "select", options: ["instagram","facebook","youtube","whatsapp","tiktok"] }
+              - { label: "Nome exibido", name: "nome", widget: "string" }
+              - { label: "Endereço (link)", name: "url", widget: "string", required: false }
+
+          - label: "YouTube (vídeos automáticos)"
+            name: "youtube"
+            widget: "object"
+            fields:
+              - { label: "Chave da API do YouTube (Google)", name: "apiKey", widget: "string", required: false }
+              - { label: "Canal (o @ sem o arroba, ex.: adonaitune)", name: "channelHandle", widget: "string", required: false }
+              - { label: "Canal do Adonai Shalom (opcional, se for outro canal)", name: "channelHandleShalom", widget: "string", required: false }
+              - { label: "Canal Kids (opcional, se for outro canal)", name: "channelHandleKids", widget: "string", required: false }
+
+          - label: "Vídeos escolhidos — Adonai Shalom (opcional)"
+            name: "videos_shalom"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Link do vídeo no YouTube", name: "url", widget: "string" }
+              - { label: "Título", name: "title", widget: "string", required: false }
+
+          - label: "Vídeos escolhidos — AdonaiTune (opcional)"
+            name: "videos_tune"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Link do vídeo no YouTube", name: "url", widget: "string" }
+              - { label: "Título", name: "title", widget: "string", required: false }
+
+          - label: "Vídeos escolhidos — AdonaiTune Kids (opcional)"
+            name: "videos_kids"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Link do vídeo no YouTube", name: "url", widget: "string" }
+              - { label: "Título", name: "title", widget: "string", required: false }
