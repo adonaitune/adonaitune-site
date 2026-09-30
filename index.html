@@ -280,6 +280,23 @@ footer{padding:56px 0 130px;color:var(--muted);font-size:.95rem}
   .is-playing .eq i{animation:none;transform:scaleY(.5)}
 }
 
+/* ---- Player oficial da Caster.fm, encolhido para caber como um botão ----
+   Se aparecer cortado ou com espaço sobrando, ajuste os 3 números marcados. */
+.ct-mini{
+  width:260px;            /* <- tamanho final desejado (o "botão") */
+  height:64px;            /* <- altura final desejada */
+  margin:0 auto;
+  overflow:hidden;
+  border-radius:999px;
+  box-shadow:0 8px 22px #ffbd1838;
+  position:relative;
+}
+.ct-mini-inner{
+  width:900px;            /* <- largura "de verdade" do player da Caster.fm */
+  transform:scale(0.2889); /* 260 / 900 */
+  transform-origin:top left;
+}
+
 /* ---- Ajustes AdonaiTune Kids ---- */
 .hero-kids .mark img{width:min(300px,62vw);aspect-ratio:1/1;height:auto;object-fit:cover;border-radius:50%;box-shadow:0 0 0 3px #ff3fa4,0 0 60px #ff3fa455}
 body[data-tab="kids"] .media{background:radial-gradient(70% 90% at 25% 15%,#ff3fa433 0,#ff3fa400 60%),linear-gradient(140deg,#2a1450,#150a2e)}
@@ -382,19 +399,19 @@ body[data-tab="kids"] .media{background:radial-gradient(70% 90% at 25% 15%,#ff3f
         <h1>ADONAITUNE</h1>
         <p class="sub">RÁDIO GOSPEL 24 HORAS</p>
         <div class="cta">
-          <button class="btn big" type="button" id="heroPlay"><span id="heroIc">▶</span><span id="heroTxt">Ouvir ao vivo</span></button>
+          <div class="ct-mini" aria-label="Ouvir a AdonaiTune ao vivo">
+            <div class="ct-mini-inner">
+              <div class="cstrEmbed" data-type="newStreamPlayer" data-publicToken="d3e91477-f420-417c-b7ba-dda65cd4d8cd" data-theme="dark" data-color="ffb900" data-channelId="" data-rendered="false">
+                <a href="https://www.caster.fm">Shoutcast Hosting</a>
+                <a href="https://www.caster.fm">Stream Hosting</a>
+                <a href="https://www.caster.fm">Radio Server Hosting</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="tune-status">
-          <div class="a-pill"><span class="a-dot" id="adtDot"></span><span id="adtState">PARADO</span></div>
-          <div class="a-sig"><span id="adtSigText">Sinal</span><div class="a-bars" id="adtSig"><i></i><i></i><i></i><i></i></div></div>
-        </div>
-        <div class="tune-vol">
-          <button id="adtMute" type="button" aria-label="Silenciar">VOL</button>
-          <input id="adtVol" type="range" min="0" max="100" value="80" aria-label="Volume">
-        </div>
-        <div class="a-msg" id="adtMsg" aria-live="polite">Toque em ouvir ao vivo para começar.</div>
         <p class="slogan">Mais que uma rádio, é um propósito!</p>
       </div>
+      <script src="https://cdn.cloud.caster.fm/widgets/embed.js"></script>
       <div class="eq" id="eq" aria-hidden="true"></div>
     </section>
 
@@ -919,79 +936,6 @@ body[data-tab="kids"] .media{background:radial-gradient(70% 90% at 25% 15%,#ff3f
   if(location.hash==='#playlist'){ applyTab('tune'); setTimeout(function(){scrollToId('playlist')},60) }
 
   /* =====================================================
-     PLAYER DA RÁDIO (embutido na aba AdonaiTune)
-     ===================================================== */
-  var st=$('adtState'), dot=$('adtDot'), msg=$('adtMsg'),
-      vol=$('adtVol'), mute=$('adtMute'), sig=$('adtSig'), sigText=$('adtSigText');
-  var audio=new Audio(); audio.preload='none';
-  var urls=(S.stream&&S.stream.length)?S.stream:[], tryIdx=0;
-  var playing=false, weak=false, failed=false, lastVol=80;
-
-  function say(t){msg.textContent=t}
-  function level(){
-    if(!navigator.onLine||failed) return 0;
-    if(weak) return 1;
-    var c=navigator.connection&&navigator.connection.effectiveType;
-    return c==='slow-2g'||c==='2g'?2:c==='3g'?3:4;
-  }
-  function render(){
-    var lv=level(), bars=sig.children;
-    for(var i=0;i<4;i++) bars[i].className=i<lv?'on':'';
-    sigText.textContent=lv===0?'Sem sinal':lv===1?'Fraco':lv===2?'Médio':lv===3?'Bom':'Forte';
-    var net=navigator.onLine&&!failed;
-    dot.classList.toggle('online',net&&playing);
-    document.body.classList.toggle('is-playing',playing);
-    st.textContent=!net?'SEM SINAL':playing?'● AO VIVO':'■ PARADO';
-    $('heroIc').textContent=playing?'❚❚':'▶';
-    $('heroTxt').textContent=playing?'Pausar rádio':'Ouvir ao vivo';
-    if('mediaSession' in navigator) navigator.mediaSession.playbackState=playing?'playing':'paused';
-  }
-  function startStream(){
-    if(!urls.length){failed=true;say('Link da rádio não configurado.');render();return}
-    failed=false; weak=false;
-    var u=urls[tryIdx];
-    audio.src=u+(u.indexOf('?')>-1?'&':'?')+'t='+Date.now();
-    audio.volume=vol.value/100;
-    var p=audio.play(); if(p&&p.catch) p.catch(function(){nextLink()});
-  }
-  function nextLink(){
-    if(tryIdx<urls.length-1){tryIdx++;startStream()}
-    else{tryIdx=0;failed=true;playing=false;say('Não foi possível conectar. Toque para tentar de novo.');render()}
-  }
-  function toggle(){ if(audio.paused){tryIdx=0;startStream()}else{audio.pause()} }
-  audio.addEventListener('playing',function(){playing=true;weak=false;failed=false;say('Transmissão ao vivo.');render()});
-  audio.addEventListener('pause',function(){playing=false;say('Rádio pausada.');render()});
-  audio.addEventListener('waiting',function(){weak=true;say('Sinal fraco… reconectando.');render()});
-  audio.addEventListener('stalled',function(){weak=true;render()});
-  audio.addEventListener('error',function(){if(audio.getAttribute('src')) nextLink()});
-  window.addEventListener('online',function(){failed=false;say('Internet de volta.');render()});
-  window.addEventListener('offline',function(){say('Sem internet.');render()});
-  $('heroPlay').addEventListener('click',toggle);
-
-  vol.addEventListener('input',function(){
-    audio.volume=vol.value/100;
-    if(vol.value>0) lastVol=vol.value;
-    mute.textContent=vol.value==0?'MUDO':'VOL';
-    store('vol',vol.value);
-  });
-  mute.addEventListener('click',function(){
-    if(vol.value>0){lastVol=vol.value;vol.value=0}else{vol.value=lastVol||80}
-    vol.dispatchEvent(new Event('input'));
-  });
-
-  if('mediaSession' in navigator){
-    try{
-      navigator.mediaSession.metadata=new MediaMetadata({title:'Rádio Gospel 24 Horas',artist:'AdonaiTune',artwork:[{src:'assets/logo-tune.png',sizes:'512x512',type:'image/png'}]});
-      navigator.mediaSession.setActionHandler('play',function(){if(audio.paused)toggle()});
-      navigator.mediaSession.setActionHandler('pause',function(){if(!audio.paused)toggle()});
-    }catch(e){}
-  }
-
-  vol.value=load('vol',80);
-  vol.dispatchEvent(new Event('input'));
-  render();
-
-  /* =====================================================
      PAINEL: busca o conteúdo real em data/site.json (editado
      pelo painel em /admin) e atualiza a página. Se o arquivo
      não existir ainda, ou o site tiver sido aberto direto do
@@ -1001,7 +945,7 @@ body[data-tab="kids"] .media{background:radial-gradient(70% 90% at 25% 15%,#ff3f
   fetch('data/site.json', {cache:'no-store'}).then(function(r){
     if(!r.ok) throw 0; return r.json();
   }).then(function(d){
-    if(d.stream && d.stream.length){ urls.length=0; Array.prototype.push.apply(urls, d.stream); }
+    /* Link da transmissão: não é mais usado aqui (o player oficial da Caster.fm cuida disso sozinho). */
     S.posts = d.posts || S.posts;
     S.news = d.news || S.news;
     S.stories = { shalom: d.stories_shalom||[], tune: d.stories_tune||[], kids: d.stories_kids||[] };
