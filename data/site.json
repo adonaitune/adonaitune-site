@@ -1,6 +1,159 @@
 {
   "stream": [
-    "https://sapircast.caster.fm:11225/Mw3Cv?token=0c1581659ddfa16ad92831b46ac36d2a"
+    "https://adonaitune.ismyradio.com"
+  ],
+  "youtube": {
+    "apiKey": "",
+    "channelHandle": "adonaitune",
+    "channelHandleKids": "",
+    "channelHandleShalom": ""
+  },
+  "stories_tune": [
+    {
+      "type": "video",
+      "src": "",
+      "poster": "",
+      "label": "Ao vivo",
+      "caption": "",
+      "exemplo": true
+    }
+  ],
+  "videos_shalom": [],
+  "stories_shalom": [
+    {
+      "type": "video",
+      "src": "",
+      "poster": "",
+      "label": "Prévia",
+      "caption": "",
+      "exemplo": true
+    },
+    {
+      "type": "image",
+      "src": "",
+      "poster": "",
+      "label": "Evento",
+      "caption": "",
+      "exemplo": true
+    }
+  ],
+  "social_tune": [
+    {
+      "rede": "instagram",
+      "nome": "Instagram",
+      "url": ""
+    },
+    {
+      "rede": "facebook",
+      "nome": "Facebook",
+      "url": ""
+    },
+    {
+      "rede": "youtube",
+      "nome": "YouTube",
+      "url": ""
+    },
+    {
+      "rede": "whatsapp",
+      "nome": "WhatsApp",
+      "url": ""
+    },
+    {
+      "rede": "tiktok",
+      "nome": "TikTok",
+      "url": ""
+    }
+  ],
+  "social_shalom": [
+    {
+      "rede": "instagram",
+      "nome": "Instagram",
+      "url": ""
+    },
+    {
+      "rede": "facebook",
+      "nome": "Facebook",
+      "url": ""
+    },
+    {
+      "rede": "youtube",
+      "nome": "YouTube",
+      "url": ""
+    },
+    {
+      "rede": "whatsapp",
+      "nome": "WhatsApp",
+      "url": ""
+    },
+    {
+      "rede": "tiktok",
+      "nome": "TikTok",
+      "url": ""
+    }
+  ],
+  "playlist": [
+    {
+      "title": "Música 1",
+      "artist": "AdonaiTune",
+      "src": "",
+      "exemplo": true
+    },
+    {
+      "title": "Música 2",
+      "artist": "AdonaiTune",
+      "src": "",
+      "exemplo": true
+    },
+    {
+      "title": "Música 3",
+      "artist": "AdonaiTune",
+      "src": "",
+      "exemplo": true
+    },
+    {
+      "title": "Música 4",
+      "artist": "AdonaiTune",
+      "src": "",
+      "exemplo": true
+    },
+    {
+      "title": "Música 5",
+      "artist": "AdonaiTune",
+      "src": "",
+      "exemplo": true
+    },
+    {
+      "title": "Música 6",
+      "artist": "AdonaiTune",
+      "src": "",
+      "exemplo": true
+    },
+    {
+      "title": "Música 7",
+      "artist": "AdonaiTune",
+      "src": "",
+      "exemplo": true
+    }
+  ],
+  "news": [
+    {
+      "date": "",
+      "title": "Novidade da rádio",
+      "text": "Avisos, programação especial e novas músicas entram aqui.",
+      "exemplo": true
+    },
+    {
+      "date": "",
+      "title": "Divulgue a AdonaiTune",
+      "text": "Compartilhe o link da rádio com quem precisa de uma palavra hoje.",
+      "exemplo": true
+    },
+    {
+      "date": "",
+      "title": "Peça sua oração",
+      "text": "Explique aqui como o ouvinte pode enviar um pedido de oração.",
+      "exemplo": true
+    }
   ],
   "posts": [
     {
@@ -49,150 +202,28 @@
       "exemplo": true
     }
   ],
-  "news": [
+  "videos_kids": [
     {
-      "date": "",
-      "title": "Novidade da rádio",
-      "text": "Avisos, programação especial e novas músicas entram aqui.",
-      "exemplo": true
+      "url": "https://youtu.be/7gizscQ6tDM",
+      "title": "FÉ E PODER"
     },
     {
-      "date": "",
-      "title": "Divulgue a AdonaiTune",
-      "text": "Compartilhe o link da rádio com quem precisa de uma palavra hoje.",
-      "exemplo": true
+      "url": "https://youtu.be/ZWgsIAIc9Vk",
+      "title": "TU É O REI, O NOSSO SENHOR"
     },
     {
-      "date": "",
-      "title": "Peça sua oração",
-      "text": "Explique aqui como o ouvinte pode enviar um pedido de oração.",
-      "exemplo": true
+      "url": "https://youtu.be/CfLhQG2pbEo",
+      "title": "A TURMINHA PROCLAMA DEUS É REAL"
     }
   ],
-  "stories_shalom": [
+  "stories_kids": [
     {
       "type": "video",
       "src": "",
       "poster": "",
-      "label": "Prévia",
+      "label": "Kids",
       "caption": "",
       "exemplo": true
-    },
-    {
-      "type": "image",
-      "src": "",
-      "poster": "",
-      "label": "Evento",
-      "caption": "",
-      "exemplo": true
-    }
-  ],
-  "stories_tune": [
-    {
-      "type": "video",
-      "src": "",
-      "poster": "",
-      "label": "Ao vivo",
-      "caption": "",
-      "exemplo": true
-    }
-  ],
-  "playlist": [
-    {
-      "title": "Música 1",
-      "artist": "AdonaiTune",
-      "src": "",
-      "exemplo": true
-    },
-    {
-      "title": "Música 2",
-      "artist": "AdonaiTune",
-      "src": "",
-      "exemplo": true
-    },
-    {
-      "title": "Música 3",
-      "artist": "AdonaiTune",
-      "src": "",
-      "exemplo": true
-    },
-    {
-      "title": "Música 4",
-      "artist": "AdonaiTune",
-      "src": "",
-      "exemplo": true
-    },
-    {
-      "title": "Música 5",
-      "artist": "AdonaiTune",
-      "src": "",
-      "exemplo": true
-    },
-    {
-      "title": "Música 6",
-      "artist": "AdonaiTune",
-      "src": "",
-      "exemplo": true
-    },
-    {
-      "title": "Música 7",
-      "artist": "AdonaiTune",
-      "src": "",
-      "exemplo": true
-    }
-  ],
-  "social_shalom": [
-    {
-      "rede": "instagram",
-      "nome": "Instagram",
-      "url": ""
-    },
-    {
-      "rede": "facebook",
-      "nome": "Facebook",
-      "url": ""
-    },
-    {
-      "rede": "youtube",
-      "nome": "YouTube",
-      "url": ""
-    },
-    {
-      "rede": "whatsapp",
-      "nome": "WhatsApp",
-      "url": ""
-    },
-    {
-      "rede": "tiktok",
-      "nome": "TikTok",
-      "url": ""
-    }
-  ],
-  "social_tune": [
-    {
-      "rede": "instagram",
-      "nome": "Instagram",
-      "url": ""
-    },
-    {
-      "rede": "facebook",
-      "nome": "Facebook",
-      "url": ""
-    },
-    {
-      "rede": "youtube",
-      "nome": "YouTube",
-      "url": ""
-    },
-    {
-      "rede": "whatsapp",
-      "nome": "WhatsApp",
-      "url": ""
-    },
-    {
-      "rede": "tiktok",
-      "nome": "TikTok",
-      "url": ""
     }
   ],
   "posts_kids": [
@@ -233,16 +264,7 @@
       "exemplo": true
     }
   ],
-  "stories_kids": [
-    {
-      "type": "video",
-      "src": "",
-      "poster": "",
-      "label": "Kids",
-      "caption": "",
-      "exemplo": true
-    }
-  ],
+  "videos_tune": [],
   "social_kids": [
     {
       "rede": "instagram",
@@ -269,14 +291,5 @@
       "nome": "TikTok",
       "url": ""
     }
-  ],
-  "youtube": {
-    "apiKey": "",
-    "channelHandle": "adonaitune",
-    "channelHandleKids": "",
-    "channelHandleShalom": ""
-  },
-  "videos_shalom": [],
-  "videos_tune": [],
-  "videos_kids": []
+  ]
 }
