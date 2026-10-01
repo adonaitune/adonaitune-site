@@ -26,6 +26,76 @@ collections:
             summary: "{{fields.url}}"
             field: { label: "Link", name: "url", widget: "string" }
 
+          - label: "Adonai Shalom — Bloco 1 (título, áudio e carrossel)"
+            name: "bloco_shalom_1"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string", required: false }
+              - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
+              - label: "Carrossel de imagens (até 5 imagens)"
+                name: "images"
+                widget: "list"
+                required: false
+                max: 5
+                summary: "{{fields.img}}"
+                field: { label: "Imagem", name: "img", widget: "image" }
+
+          - label: "Adonai Shalom — Bloco 2 (título, áudio e carrossel)"
+            name: "bloco_shalom_2"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string", required: false }
+              - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
+              - label: "Carrossel de imagens (até 5 imagens)"
+                name: "images"
+                widget: "list"
+                required: false
+                max: 5
+                summary: "{{fields.img}}"
+                field: { label: "Imagem", name: "img", widget: "image" }
+
+          - label: "Adonai Shalom — Bloco 3 (título, áudio e carrossel)"
+            name: "bloco_shalom_3"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string", required: false }
+              - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
+              - label: "Carrossel de imagens (até 5 imagens)"
+                name: "images"
+                widget: "list"
+                required: false
+                max: 5
+                summary: "{{fields.img}}"
+                field: { label: "Imagem", name: "img", widget: "image" }
+
+          - label: "Adonai Shalom — Bloco 4 (título, áudio e carrossel)"
+            name: "bloco_shalom_4"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string", required: false }
+              - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
+              - label: "Carrossel de imagens (até 5 imagens)"
+                name: "images"
+                widget: "list"
+                required: false
+                max: 5
+                summary: "{{fields.img}}"
+                field: { label: "Imagem", name: "img", widget: "image" }
+
+          - label: "Adonai Shalom — Bloco 5 (título, áudio e carrossel)"
+            name: "bloco_shalom_5"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string", required: false }
+              - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
+              - label: "Carrossel de imagens (até 5 imagens)"
+                name: "images"
+                widget: "list"
+                required: false
+                max: 5
+                summary: "{{fields.img}}"
+                field: { label: "Imagem", name: "img", widget: "image" }
+
           - label: "Publicações — Adonai Shalom"
             name: "posts"
             widget: "list"
@@ -73,14 +143,15 @@ collections:
               - { label: "Legenda ao abrir", name: "caption", widget: "string", required: false }
               - { label: "Marcar como exemplo", name: "exemplo", widget: "boolean", default: false }
 
-          - label: "Playlist — AdonaiTune"
+          - label: "Músicas — AdonaiTune (carrossel)"
             name: "playlist"
             widget: "list"
             summary: "{{fields.title}}"
             fields:
               - { label: "Título da música", name: "title", widget: "string" }
               - { label: "Artista", name: "artist", widget: "string", default: "AdonaiTune" }
-              - { label: "Arquivo de áudio (mp3)", name: "src", widget: "file", required: false }
+              - { label: "Arquivo de áudio (enviar mp3)", name: "src", widget: "file", required: false }
+              - { label: "Capa da música (opcional)", name: "cover", widget: "image", required: false }
               - { label: "Marcar como exemplo", name: "exemplo", widget: "boolean", default: false }
 
           - label: "Redes sociais — Adonai Shalom"
@@ -100,6 +171,76 @@ collections:
               - { label: "Rede", name: "rede", widget: "select", options: ["instagram","facebook","youtube","whatsapp","tiktok"] }
               - { label: "Nome exibido", name: "nome", widget: "string" }
               - { label: "Endereço (link)", name: "url", widget: "string", required: false }
+
+          - label: "AdonaiTune Kids — Bloco 1 (título, áudio e carrossel)"
+            name: "bloco_kids_1"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string", required: false }
+              - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
+              - label: "Carrossel de imagens (até 5 imagens)"
+                name: "images"
+                widget: "list"
+                required: false
+                max: 5
+                summary: "{{fields.img}}"
+                field: { label: "Imagem", name: "img", widget: "image" }
+
+          - label: "AdonaiTune Kids — Bloco 2 (título, áudio e carrossel)"
+            name: "bloco_kids_2"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string", required: false }
+              - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
+              - label: "Carrossel de imagens (até 5 imagens)"
+                name: "images"
+                widget: "list"
+                required: false
+                max: 5
+                summary: "{{fields.img}}"
+                field: { label: "Imagem", name: "img", widget: "image" }
+
+          - label: "AdonaiTune Kids — Bloco 3 (título, áudio e carrossel)"
+            name: "bloco_kids_3"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string", required: false }
+              - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
+              - label: "Carrossel de imagens (até 5 imagens)"
+                name: "images"
+                widget: "list"
+                required: false
+                max: 5
+                summary: "{{fields.img}}"
+                field: { label: "Imagem", name: "img", widget: "image" }
+
+          - label: "AdonaiTune Kids — Bloco 4 (título, áudio e carrossel)"
+            name: "bloco_kids_4"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string", required: false }
+              - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
+              - label: "Carrossel de imagens (até 5 imagens)"
+                name: "images"
+                widget: "list"
+                required: false
+                max: 5
+                summary: "{{fields.img}}"
+                field: { label: "Imagem", name: "img", widget: "image" }
+
+          - label: "AdonaiTune Kids — Bloco 5 (título, áudio e carrossel)"
+            name: "bloco_kids_5"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string", required: false }
+              - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
+              - label: "Carrossel de imagens (até 5 imagens)"
+                name: "images"
+                widget: "list"
+                required: false
+                max: 5
+                summary: "{{fields.img}}"
+                field: { label: "Imagem", name: "img", widget: "image" }
 
           - label: "Publicações — AdonaiTune Kids"
             name: "posts_kids"
@@ -132,6 +273,79 @@ collections:
             summary: "{{fields.nome}}"
             fields:
               - { label: "Rede", name: "rede", widget: "select", options: ["instagram","facebook","youtube","whatsapp","tiktok"] }
+              - { label: "Nome exibido", name: "nome", widget: "string" }
+              - { label: "Endereço (link)", name: "url", widget: "string", required: false }
+
+          - label: "Café com Elas — quadro em destaque (ao vivo)"
+            name: "podcast_live"
+            widget: "object"
+            fields:
+              - { label: "Link do vídeo ou da transmissão ao vivo no YouTube", name: "url", widget: "string", required: false }
+              - { label: "Está ao vivo agora? (mostra a etiqueta AO VIVO)", name: "aovivo", widget: "boolean", default: false }
+              - { label: "Título do quadro", name: "title", widget: "string", required: false }
+              - { label: "Texto curto (ex.: toda quinta às 19h)", name: "text", widget: "string", required: false }
+              - { label: "Código do canal (opcional, começa com UC)", name: "channelId", widget: "string", required: false }
+
+          - label: "Café com Elas — Bloco 1 (título, áudio e carrossel)"
+            name: "bloco_podcast_1"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string", required: false }
+              - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
+              - label: "Carrossel de imagens (até 5 imagens)"
+                name: "images"
+                widget: "list"
+                required: false
+                max: 5
+                summary: "{{fields.img}}"
+                field: { label: "Imagem", name: "img", widget: "image" }
+
+          - label: "Café com Elas — Bloco 2 (título, áudio e carrossel)"
+            name: "bloco_podcast_2"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string", required: false }
+              - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
+              - label: "Carrossel de imagens (até 5 imagens)"
+                name: "images"
+                widget: "list"
+                required: false
+                max: 5
+                summary: "{{fields.img}}"
+                field: { label: "Imagem", name: "img", widget: "image" }
+
+          - label: "Café com Elas — Bloco 3 (título, áudio e carrossel)"
+            name: "bloco_podcast_3"
+            widget: "object"
+            fields:
+              - { label: "Título", name: "title", widget: "string", required: false }
+              - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
+              - label: "Carrossel de imagens (até 5 imagens)"
+                name: "images"
+                widget: "list"
+                required: false
+                max: 5
+                summary: "{{fields.img}}"
+                field: { label: "Imagem", name: "img", widget: "image" }
+
+          - label: "Vídeos do YouTube — Café com Elas (carrossel)"
+            name: "podcast"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Título do episódio", name: "title", widget: "string" }
+              - { label: "Data (texto livre)", name: "date", widget: "string", required: false }
+              - { label: "Resumo", name: "text", widget: "text", required: false }
+              - { label: "Link do vídeo no YouTube (se tiver)", name: "url", widget: "string", required: false }
+              - { label: "Arquivo de áudio mp3 (se não for YouTube)", name: "src", widget: "file", required: false }
+              - { label: "Marcar como exemplo", name: "exemplo", widget: "boolean", default: false }
+
+          - label: "Onde ouvir — Podcast"
+            name: "social_podcast"
+            widget: "list"
+            summary: "{{fields.nome}}"
+            fields:
+              - { label: "Plataforma", name: "rede", widget: "select", options: ["spotify","podcast","youtube","instagram","whatsapp"] }
               - { label: "Nome exibido", name: "nome", widget: "string" }
               - { label: "Endereço (link)", name: "url", widget: "string", required: false }
 

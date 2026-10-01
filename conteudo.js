@@ -38,6 +38,21 @@ window.SITE = {
      caption: o texto que aparece na base do story, ao abrir (opcional).
      Envie os vídeos e fotos para o Claude no chat que ele coloca aqui, ou cole o link do arquivo já publicado. */
 
+  /* ===== Podcast: episódios (url = link do YouTube; src = arquivo de áudio .mp3) ===== */
+  /* Blocos de exemplo (título + áudio + imagens). Os reais são preenchidos pelo painel /admin. */
+  bloco_shalom_1: { title: "Exemplo: título da mensagem", audio: "assets/exemplo-audio.wav", images: ["assets/cover-shalom.jpg", "assets/logo-shalom.png"] },
+  bloco_podcast_1: { title: "Exemplo: título da mensagem", audio: "assets/exemplo-audio.wav", images: ["assets/capa-cafe-com-elas.svg", "assets/logo-cafe-com-elas.svg"] },
+  bloco_kids_1: { title: "Exemplo: título da mensagem", audio: "assets/exemplo-audio.wav", images: ["assets/cover-kids.jpg", "assets/logo-kids.png"] },
+
+  /* Quadro em destaque da aba Café com Elas: cole o link do YouTube (vídeo ou transmissão ao vivo). */
+  podcast_live: { url: "", aovivo: false, title: "", text: "", channelId: "" },
+  podcast: [
+    { title: "Café com Elas com Naiara Delmondes | Entrevista com Luana Souza", date: "", text: "Entrevista no Café com Elas.", url: "https://www.youtube.com/watch?v=aQtDlqCFDLY", src: "", exemplo: false },
+    { title: "Café com Elas com Naiara Delmondes | Entrevista com Edna Carvalho", date: "", text: "Entrevista no Café com Elas.", url: "", src: "", exemplo: false },
+    { title: "Café com Elas com Naiara Delmondes | Entrevista com Amanda Sousa", date: "", text: "Entrevista no Café com Elas.", url: "", src: "", exemplo: false },
+    { title: "Café com Elas com Naiara Delmondes | Conversa com a Apóstola Fran Dias", date: "", text: "Entrevista no Café com Elas.", url: "", src: "", exemplo: false }
+  ],
+
   /* ===== AdonaiTune Kids ===== */
   posts_kids: [{"cat": "Músicas", "date": "", "title": "Louvor da semana", "text": "Uma música animada para cantar junto com a criançada.", "url": "", "img": "", "exemplo": true}, {"cat": "Mensagens", "date": "", "title": "Mensagem para os pequenos", "text": "Uma palavra curtinha, no jeito das crianças.", "url": "", "img": "", "exemplo": true}, {"cat": "Atividades", "date": "", "title": "Atividade da semana", "text": "Uma brincadeira ou desafio com propósito.", "url": "", "img": "", "exemplo": true}, {"cat": "Eventos", "date": "", "title": "Próximo encontro Kids", "text": "Data, local e horário do próximo evento para a criançada.", "url": "", "img": "", "exemplo": true}],
   /* Vídeos do YouTube: a chave (apiKey) é gratuita, criada no Google Cloud.
@@ -63,9 +78,9 @@ window.SITE = {
      src: o link direto do arquivo de áudio (.mp3). Sem o link, a música aparece na lista mas sem o botão de tocar.
      Envie os arquivos das 7 músicas para o Claude no chat, ou cole os links delas já publicados. */
   playlist: [
-    { title: "Música 1", artist: "AdonaiTune", src: "", exemplo: true },
-    { title: "Música 2", artist: "AdonaiTune", src: "", exemplo: true },
-    { title: "Música 3", artist: "AdonaiTune", src: "", exemplo: true },
+    { title: "Exemplo: música 1", artist: "AdonaiTune", src: "assets/exemplo-audio.wav", exemplo: true },
+    { title: "Exemplo: música 2", artist: "AdonaiTune", src: "assets/exemplo-audio.wav", exemplo: true },
+    { title: "Exemplo: música 3", artist: "AdonaiTune", src: "assets/exemplo-audio.wav", exemplo: true },
     { title: "Música 4", artist: "AdonaiTune", src: "", exemplo: true },
     { title: "Música 5", artist: "AdonaiTune", src: "", exemplo: true },
     { title: "Música 6", artist: "AdonaiTune", src: "", exemplo: true },
@@ -75,6 +90,7 @@ window.SITE = {
   /* Redes sociais. Cole o endereço em url. Enquanto estiver vazio, o botão aparece como "em breve".
      rede: instagram, facebook, youtube, whatsapp ou tiktok. */
   social: {
+    podcast: [{ rede: "spotify", nome: "Spotify", url: "" }, { rede: "podcast", nome: "Apple Podcasts", url: "" }, { rede: "youtube", nome: "YouTube", url: "" }],
     shalom: [
       { rede: "instagram", nome: "Instagram", url: "" },
       { rede: "facebook",  nome: "Facebook",  url: "" },
