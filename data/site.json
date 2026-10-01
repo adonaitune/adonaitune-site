@@ -264,7 +264,20 @@
       "exemplo": true
     }
   ],
-  "videos_tune": [],
+  "videos_tune": [
+    {
+      "url": "https://youtu.be/5UamP5KbIZU",
+      "title": "A UNIÃO DOS POVOS"
+    },
+    {
+      "url": "https://youtu.be/7Y1Dy8d49CU",
+      "title": "VOLTE PARA MIM"
+    },
+    {
+      "url": "https://youtu.be/gTlr80EULyk",
+      "title": "O CAMPO DA GRAÇA"
+    }
+  ],
   "social_kids": [
     {
       "rede": "instagram",
