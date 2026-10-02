@@ -1,0 +1,18 @@
+<svg viewBox="0 0 300 300" role="img" aria-label="Logo Café com Elas" xmlns="http://www.w3.org/2000/svg">
+<defs><radialGradient id="cceBg" cx="50%" cy="35%" r="75%"><stop offset="0" stop-color="#d98a4f"/><stop offset="1" stop-color="#6e3a20"/></radialGradient></defs>
+<circle cx="150" cy="150" r="146" fill="url(#cceBg)" stroke="#f6d2a6" stroke-width="4"/>
+<path d="M150 112c-12-22-46-10-36 17 7 18 36 34 36 34s29-16 36-34c10-27-24-39-36-17z" fill="none" stroke="#fff3e2" stroke-width="6" stroke-linejoin="round"/>
+<path d="M132 80c-8-8 8-14 0-24M150 76c-8-8 8-14 0-24M168 80c-8-8 8-14 0-24" fill="none" stroke="#fff3e2" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+<path d="M192 160c26-4 26 30-2 32" fill="none" stroke="#f6e9d6" stroke-width="9" stroke-linecap="round"/>
+<path d="M104 150h92c0 42-20 66-46 66s-46-24-46-66z" fill="#f8ebd8"/>
+<ellipse cx="150" cy="150" rx="46" ry="9" fill="#5a2f1a"/>
+<ellipse cx="150" cy="222" rx="76" ry="11" fill="#ead6bb"/><ellipse cx="150" cy="219" rx="52" ry="7" fill="#f8ebd8"/>
+<circle cx="128" cy="184" r="7" fill="#e58a8a"/><circle cx="150" cy="196" r="7" fill="#e58a8a"/><circle cx="172" cy="184" r="7" fill="#e58a8a"/>
+<path d="M120 190c6-4 10 0 8 6M144 202c6-4 10 0 8 6" stroke="#8a4a2a" fill="none" stroke-width="2"/>
+<g transform="translate(226 150)"><ellipse rx="17" ry="27" fill="#e4dccd" stroke="#8c6b3f" stroke-width="3"/><path d="M-13-12h26M-15 0h30M-13 12h26M0-26v52" stroke="#8c6b3f" stroke-width="1.5" opacity=".7"/><path d="M0 27v34M-14 66h28" stroke="#d8b46a" stroke-width="5" stroke-linecap="round"/></g>
+<path d="M52 246l46-12 52 6 52-6 46 12-4 12-42-10-52 6-52-6-42 10z" fill="#fff3e2" opacity=".92"/>
+<g fill="#e58a8a"><circle cx="74" cy="214" r="14"/><circle cx="96" cy="226" r="10"/><circle cx="58" cy="232" r="9"/></g>
+<g fill="none" stroke="#b85a62" stroke-width="2"><path d="M68 214c6-8 14-2 10 4M91 226c4-5 10-1 7 3"/></g>
+<g fill="#e8955a"><circle cx="232" cy="236" r="12"/><circle cx="212" cy="244" r="8"/></g>
+<g fill="#5b7a4a"><ellipse cx="86" cy="238" rx="12" ry="5" transform="rotate(-20 86 238)"/><ellipse cx="222" cy="250" rx="12" ry="5" transform="rotate(15 222 250)"/></g>
+</svg>

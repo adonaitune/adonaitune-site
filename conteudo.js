@@ -40,9 +40,9 @@ window.SITE = {
 
   /* ===== Podcast: episódios (url = link do YouTube; src = arquivo de áudio .mp3) ===== */
   /* Blocos de exemplo (título + áudio + imagens). Os reais são preenchidos pelo painel /admin. */
-  bloco_shalom_1: { title: "Exemplo: título da mensagem", audio: "assets/exemplo-audio.wav", images: ["assets/cover-shalom.jpg", "assets/logo-shalom.png"] },
+  bloco_shalom_1: { title: "Exemplo: título da mensagem", audio: "assets/exemplo-audio.wav", images: ["assets/exemplo-shalom-1.jpg", "assets/exemplo-shalom-2.jpg", "assets/exemplo-shalom-3.jpg", "assets/exemplo-shalom-4.jpg", "assets/exemplo-shalom-5.jpg"] },
   bloco_podcast_1: { title: "Exemplo: título da mensagem", audio: "assets/exemplo-audio.wav", images: ["assets/capa-cafe-com-elas.svg", "assets/logo-cafe-com-elas.svg"] },
-  bloco_kids_1: { title: "Exemplo: título da mensagem", audio: "assets/exemplo-audio.wav", images: ["assets/cover-kids.jpg", "assets/logo-kids.png"] },
+  bloco_kids_1: { title: "Exemplo: título da mensagem", audio: "assets/exemplo-audio.wav", images: ["assets/exemplo-kids-1.jpg", "assets/exemplo-kids-2.jpg", "assets/exemplo-kids-3.jpg", "assets/exemplo-kids-4.jpg", "assets/exemplo-kids-5.jpg"] },
 
   /* Quadro em destaque da aba Café com Elas: cole o link do YouTube (vídeo ou transmissão ao vivo). */
   podcast_live: { url: "", aovivo: false, title: "", text: "", channelId: "" },

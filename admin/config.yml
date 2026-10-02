@@ -32,13 +32,13 @@ collections:
             fields:
               - { label: "Título", name: "title", widget: "string", required: false }
               - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
-              - label: "Carrossel de imagens (até 5 imagens)"
+              - label: "Carrossel de imagens (até 5, na vertical 9:16, ex.: 1080x1920)"
                 name: "images"
                 widget: "list"
                 required: false
                 max: 5
                 summary: "{{fields.img}}"
-                field: { label: "Imagem", name: "img", widget: "image" }
+                field: { label: "Imagem vertical 9:16", name: "img", widget: "image" }
 
           - label: "Adonai Shalom — Bloco 2 (título, áudio e carrossel)"
             name: "bloco_shalom_2"
@@ -46,13 +46,13 @@ collections:
             fields:
               - { label: "Título", name: "title", widget: "string", required: false }
               - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
-              - label: "Carrossel de imagens (até 5 imagens)"
+              - label: "Carrossel de imagens (até 5, na vertical 9:16, ex.: 1080x1920)"
                 name: "images"
                 widget: "list"
                 required: false
                 max: 5
                 summary: "{{fields.img}}"
-                field: { label: "Imagem", name: "img", widget: "image" }
+                field: { label: "Imagem vertical 9:16", name: "img", widget: "image" }
 
           - label: "Adonai Shalom — Bloco 3 (título, áudio e carrossel)"
             name: "bloco_shalom_3"
@@ -60,13 +60,13 @@ collections:
             fields:
               - { label: "Título", name: "title", widget: "string", required: false }
               - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
-              - label: "Carrossel de imagens (até 5 imagens)"
+              - label: "Carrossel de imagens (até 5, na vertical 9:16, ex.: 1080x1920)"
                 name: "images"
                 widget: "list"
                 required: false
                 max: 5
                 summary: "{{fields.img}}"
-                field: { label: "Imagem", name: "img", widget: "image" }
+                field: { label: "Imagem vertical 9:16", name: "img", widget: "image" }
 
           - label: "Adonai Shalom — Bloco 4 (título, áudio e carrossel)"
             name: "bloco_shalom_4"
@@ -74,13 +74,13 @@ collections:
             fields:
               - { label: "Título", name: "title", widget: "string", required: false }
               - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
-              - label: "Carrossel de imagens (até 5 imagens)"
+              - label: "Carrossel de imagens (até 5, na vertical 9:16, ex.: 1080x1920)"
                 name: "images"
                 widget: "list"
                 required: false
                 max: 5
                 summary: "{{fields.img}}"
-                field: { label: "Imagem", name: "img", widget: "image" }
+                field: { label: "Imagem vertical 9:16", name: "img", widget: "image" }
 
           - label: "Adonai Shalom — Bloco 5 (título, áudio e carrossel)"
             name: "bloco_shalom_5"
@@ -88,13 +88,13 @@ collections:
             fields:
               - { label: "Título", name: "title", widget: "string", required: false }
               - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
-              - label: "Carrossel de imagens (até 5 imagens)"
+              - label: "Carrossel de imagens (até 5, na vertical 9:16, ex.: 1080x1920)"
                 name: "images"
                 widget: "list"
                 required: false
                 max: 5
                 summary: "{{fields.img}}"
-                field: { label: "Imagem", name: "img", widget: "image" }
+                field: { label: "Imagem vertical 9:16", name: "img", widget: "image" }
 
           - label: "Publicações — Adonai Shalom"
             name: "posts"
@@ -178,13 +178,13 @@ collections:
             fields:
               - { label: "Título", name: "title", widget: "string", required: false }
               - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
-              - label: "Carrossel de imagens (até 5 imagens)"
+              - label: "Carrossel de imagens (até 5, na vertical 9:16, ex.: 1080x1920)"
                 name: "images"
                 widget: "list"
                 required: false
                 max: 5
                 summary: "{{fields.img}}"
-                field: { label: "Imagem", name: "img", widget: "image" }
+                field: { label: "Imagem vertical 9:16", name: "img", widget: "image" }
 
           - label: "AdonaiTune Kids — Bloco 2 (título, áudio e carrossel)"
             name: "bloco_kids_2"
@@ -192,13 +192,13 @@ collections:
             fields:
               - { label: "Título", name: "title", widget: "string", required: false }
               - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
-              - label: "Carrossel de imagens (até 5 imagens)"
+              - label: "Carrossel de imagens (até 5, na vertical 9:16, ex.: 1080x1920)"
                 name: "images"
                 widget: "list"
                 required: false
                 max: 5
                 summary: "{{fields.img}}"
-                field: { label: "Imagem", name: "img", widget: "image" }
+                field: { label: "Imagem vertical 9:16", name: "img", widget: "image" }
 
           - label: "AdonaiTune Kids — Bloco 3 (título, áudio e carrossel)"
             name: "bloco_kids_3"
@@ -206,13 +206,13 @@ collections:
             fields:
               - { label: "Título", name: "title", widget: "string", required: false }
               - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
-              - label: "Carrossel de imagens (até 5 imagens)"
+              - label: "Carrossel de imagens (até 5, na vertical 9:16, ex.: 1080x1920)"
                 name: "images"
                 widget: "list"
                 required: false
                 max: 5
                 summary: "{{fields.img}}"
-                field: { label: "Imagem", name: "img", widget: "image" }
+                field: { label: "Imagem vertical 9:16", name: "img", widget: "image" }
 
           - label: "AdonaiTune Kids — Bloco 4 (título, áudio e carrossel)"
             name: "bloco_kids_4"
@@ -220,13 +220,13 @@ collections:
             fields:
               - { label: "Título", name: "title", widget: "string", required: false }
               - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
-              - label: "Carrossel de imagens (até 5 imagens)"
+              - label: "Carrossel de imagens (até 5, na vertical 9:16, ex.: 1080x1920)"
                 name: "images"
                 widget: "list"
                 required: false
                 max: 5
                 summary: "{{fields.img}}"
-                field: { label: "Imagem", name: "img", widget: "image" }
+                field: { label: "Imagem vertical 9:16", name: "img", widget: "image" }
 
           - label: "AdonaiTune Kids — Bloco 5 (título, áudio e carrossel)"
             name: "bloco_kids_5"
@@ -234,13 +234,13 @@ collections:
             fields:
               - { label: "Título", name: "title", widget: "string", required: false }
               - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
-              - label: "Carrossel de imagens (até 5 imagens)"
+              - label: "Carrossel de imagens (até 5, na vertical 9:16, ex.: 1080x1920)"
                 name: "images"
                 widget: "list"
                 required: false
                 max: 5
                 summary: "{{fields.img}}"
-                field: { label: "Imagem", name: "img", widget: "image" }
+                field: { label: "Imagem vertical 9:16", name: "img", widget: "image" }
 
           - label: "Publicações — AdonaiTune Kids"
             name: "posts_kids"
@@ -292,13 +292,13 @@ collections:
             fields:
               - { label: "Título", name: "title", widget: "string", required: false }
               - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
-              - label: "Carrossel de imagens (até 5 imagens)"
+              - label: "Carrossel de imagens (até 5, na vertical 9:16, ex.: 1080x1920)"
                 name: "images"
                 widget: "list"
                 required: false
                 max: 5
                 summary: "{{fields.img}}"
-                field: { label: "Imagem", name: "img", widget: "image" }
+                field: { label: "Imagem vertical 9:16", name: "img", widget: "image" }
 
           - label: "Café com Elas — Bloco 2 (título, áudio e carrossel)"
             name: "bloco_podcast_2"
@@ -306,13 +306,13 @@ collections:
             fields:
               - { label: "Título", name: "title", widget: "string", required: false }
               - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
-              - label: "Carrossel de imagens (até 5 imagens)"
+              - label: "Carrossel de imagens (até 5, na vertical 9:16, ex.: 1080x1920)"
                 name: "images"
                 widget: "list"
                 required: false
                 max: 5
                 summary: "{{fields.img}}"
-                field: { label: "Imagem", name: "img", widget: "image" }
+                field: { label: "Imagem vertical 9:16", name: "img", widget: "image" }
 
           - label: "Café com Elas — Bloco 3 (título, áudio e carrossel)"
             name: "bloco_podcast_3"
@@ -320,13 +320,13 @@ collections:
             fields:
               - { label: "Título", name: "title", widget: "string", required: false }
               - { label: "Áudio (enviar arquivo mp3)", name: "audio", widget: "file", required: false }
-              - label: "Carrossel de imagens (até 5 imagens)"
+              - label: "Carrossel de imagens (até 5, na vertical 9:16, ex.: 1080x1920)"
                 name: "images"
                 widget: "list"
                 required: false
                 max: 5
                 summary: "{{fields.img}}"
-                field: { label: "Imagem", name: "img", widget: "image" }
+                field: { label: "Imagem vertical 9:16", name: "img", widget: "image" }
 
           - label: "Vídeos do YouTube — Café com Elas (carrossel)"
             name: "podcast"
